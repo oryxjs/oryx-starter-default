@@ -1,34 +1,44 @@
 {
-  "name": "medusa-starter-default",
+  "name": "oryx-starter",
   "version": "0.0.1",
-  "description": "A starter for Medusa projects.",
-  "author": "Sebastian Rindom <skrindom@gmail.com>",
+  "description": "A starter for Oryx projects.",
+  "author": "Aboozaid",
   "license": "MIT",
   "scripts": {
-    "seed": "medusa seed -f ./data/seed.json",
-    "build": "babel src -d dist --extensions \".ts,.js\"",
-    "start": "medusa develop"
+    "build": "rm -rf dist && babel src -d dist --extensions \".ts,.js\"",
+    "start": "oryx start",
+    "dev": "oryx develop",
+    "seed": "oryx seed -f ./data/seed.json",
+    "migrate:show": "oryx migrations show",
+    "migrate:run": "oryx migrations run"
   },
   "dependencies": {
-    "@medusajs/medusa": "^1.3.5",
-    "@medusajs/medusa-cli": "^1.3.1",
-    "medusa-fulfillment-manual": "^1.1.31",
-    "medusa-interfaces": "^1.3.2",
-    "medusa-payment-manual": "^1.0.16",
-    "medusa-payment-stripe": "^1.1.42",
+    "@oryxjs/oryx": "^1.3.5",
+    "@oryxjs/oryx-cli": "^1.3.1",
+    "class-transformer": "^0.5.1",
+    "dotenv": "^16.0.1",
+    "oryx-core-utils": "^1.1.31",
+    "oryx-fulfillment-manual": "^1.1.26",
+    "oryx-interfaces": "^1.3.2",
+    "oryx-payment-manual": "^1.0.8",
+    "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.36"
   },
-  "repository": "https://github.com/medusajs/medusa-starter-default.git",
+  "repository": "https://github.com/oryx/oryx-starter-default.git",
   "keywords": [
-    "sqlite",
+    "postgresql",
     "ecommerce",
     "headless",
-    "medusa"
+    "oryx"
   ],
   "devDependencies": {
     "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.10",
-    "@babel/preset-typescript": "^7.14.5",
-    "babel-preset-medusa-package": "^1.1.19"
+    "@babel/core": "^7.18.13",
+    "@babel/preset-typescript": "^7.18.6",
+    "babel-preset-oryx-package": "^1.1.19",
+    "eslint": "^8.21.0",
+    "oryx-tsconfig": "^1.0.0",
+    "oryx-eslint-config": "^1.0.0",
+    "typescript": "^4.7.4"
   }
 }

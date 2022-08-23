@@ -1,6 +1,6 @@
 FROM node:17.1.0
 
-WORKDIR /app/medusa
+WORKDIR /app/oryx
 
 COPY package.json .
 COPY develop.sh .
@@ -12,7 +12,7 @@ RUN apt-get install -y python
 
 RUN npm install -g npm@latest
 
-RUN npm install -g @medusajs/medusa-cli@latest
+RUN npm install -g @oryxjs/oryx-cli@latest
 
 RUN npm install
 

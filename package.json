@@ -24,7 +24,7 @@
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.36"
   },
-  "repository": "https://github.com/oryx/oryx-starter-default.git",
+  "repository": "https://github.com/oryxjs/oryx-starter-default.git",
   "keywords": [
     "postgresql",
     "ecommerce",
